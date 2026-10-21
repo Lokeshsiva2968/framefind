@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FrameFind — discover visual inspiration for every idea.">
+  <title>FrameFind | Discover Visual Inspiration</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="FrameFind home">
+      <span class="brand-mark" aria-hidden="true">F.</span>
+      <span>framefind</span>
+    </a>
+    <span class="header-note">A little inspiration goes a long way.</span>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">YOUR VISUAL DISCOVERY SPACE</p>
+      <h1 id="hero-title">
+        A world of images,<br>
+        <span>one search away.</span>
+      </h1>
+      <p class="hero-description">
+        Explore places, people, textures and everything in between.
+        Find the perfect visual for whatever you're imagining.
+      </p>
+
+      <form id="search-form" class="search-form">
+        <label for="search-input" class="sr-only">
+          Search for images by topic
+        </label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input
+          type="search"
+          id="search-input"
+          name="query"
+          placeholder="Try “mountain mornings”..."
+          autocomplete="off"
+        >
+        <button type="submit" id="search-button">Search <span aria-hidden="true">↗</span></button>
+      </form>
+
+      <div class="quick-explore">
+        <span class="section-label">QUICK EXPLORE</span>
+        <div class="chip-list" aria-label="Suggested search topics">
+          <button class="chip" type="button">Nature</button>
+          <button class="chip" type="button">Architecture</button>
+          <button class="chip" type="button">Street life</button>
+          <button class="chip" type="button">Minimalism</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section" aria-labelledby="gallery-title">
+      <div class="gallery-heading">
+        <div>
+          <p class="section-label">THE GALLERY</p>
+          <h2 id="gallery-title">Room for inspiration.</h2>
+        </div>
+        <span id="result-count">Your collection awaits</span>
+      </div>
+
+      <div id="results" class="results-grid"></div>
+
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon" aria-hidden="true">✳</div>
+        <h3>Your canvas awaits.</h3>
+        <p>Search for a topic above and your visual discoveries will live here.</p>
+        <span class="empty-caption">A BLANK CANVAS IS FULL OF POSSIBILITIES</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#">framefind<span>.</span></a>
+    <p>Made for curious minds and visual thinkers.</p>
+    <span>PART 01 / THE BEGINNING</span>
+  </footer>
+
+</body>
+</html>
