@@ -242,19 +242,23 @@ h1 span {
   font-size: 0.8rem;
 }
 
-/* Part 2 will add image cards inside this responsive grid. */
 .results-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
   gap: 22px;
 }
 
-/* Reserved styling for cards added in Part 2. */
 .result-card {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: white;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.result-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(23, 77, 59, 0.1);
 }
 
 .result-card img {
@@ -262,6 +266,22 @@ h1 span {
   width: 100%;
   height: 240px;
   object-fit: cover;
+}
+
+.result-card-copy {
+  padding: 13px 15px 15px;
+}
+
+.result-card-copy h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 650;
+}
+
+.result-card-copy p {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
 }
 
 .empty-state {
@@ -276,6 +296,10 @@ h1 span {
   border-radius: 18px;
   background: var(--cream);
   text-align: center;
+}
+
+.empty-state[hidden] {
+  display: none;
 }
 
 .empty-icon {
@@ -353,7 +377,8 @@ h1 span {
 }
 
 button:focus-visible,
-a:focus-visible {
+a:focus-visible,
+input:focus-visible {
   outline: 3px solid #8aaf91;
   outline-offset: 4px;
 }

@@ -7,7 +7,7 @@
   <meta name="description" content="FrameFind — discover visual inspiration for every idea.">
   <title>FrameFind | Discover Visual Inspiration</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <script src="scripts.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -41,6 +41,7 @@
           name="query"
           placeholder="Try “mountain mornings”..."
           autocomplete="off"
+          required
         >
         <button type="submit" id="search-button">Search <span aria-hidden="true">↗</span></button>
       </form>
@@ -62,16 +63,16 @@
           <p class="section-label">THE GALLERY</p>
           <h2 id="gallery-title">Room for inspiration.</h2>
         </div>
-        <span id="result-count">Your collection awaits</span>
+        <span id="result-count" aria-live="polite">Your collection awaits</span>
       </div>
 
-      <div id="results" class="results-grid"></div>
+      <div id="results" class="results-grid" aria-live="polite"></div>
 
       <div id="empty-state" class="empty-state">
         <div class="empty-icon" aria-hidden="true">✳</div>
-        <h3>Your canvas awaits.</h3>
-        <p>Search for a topic above and your visual discoveries will live here.</p>
-        <span class="empty-caption">A BLANK CANVAS IS FULL OF POSSIBILITIES</span>
+        <h3 id="empty-title">Your canvas awaits.</h3>
+        <p id="empty-description">Search for a topic above and your visual discoveries will live here.</p>
+        <span id="empty-caption" class="empty-caption">A BLANK CANVAS IS FULL OF POSSIBILITIES</span>
       </div>
     </section>
   </main>
@@ -79,7 +80,7 @@
   <footer class="site-footer">
     <a class="footer-brand" href="#">framefind<span>.</span></a>
     <p>Made for curious minds and visual thinkers.</p>
-    <span>PART 01 / THE BEGINNING</span>
+    <span>PART 02 / CURATED SEARCH</span>
   </footer>
 
 </body>
