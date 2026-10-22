@@ -424,3 +424,57 @@ a:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Hide the empty state when the gallery has results. */
+.empty-state.hidden {
+  display: none;
+}
+
+/* FrameFind image cards. */
+.result-card {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(23, 77, 59, 0.10);
+}
+
+.result-card img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  background: var(--cream);
+}
+
+.result-caption {
+  padding: 12px 13px;
+  border: 1px solid var(--line);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  background: white;
+}
+
+.result-title {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.result-card:focus-visible {
+  outline: 3px solid #8aaf91;
+  outline-offset: 4px;
+}
